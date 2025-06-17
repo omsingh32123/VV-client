@@ -1,0 +1,368 @@
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+
+.main-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 1.5rem 0;
+  background: linear-gradient(45deg, #4A90E2, #8E44AD);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dark-mode .main-title {
+  background: linear-gradient(45deg, #64B5F6, #BA68C8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.user-ranking-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.user-card {
+  position: relative;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.dark-mode .user-card {
+  background-color: #2c3035;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.user-card:hover {
+  transform: translateY(-5px);
+}
+
+.top-three {
+  border: 2px solid transparent;
+  animation: border-glow 2s infinite alternate;
+}
+
+@keyframes border-glow {
+  from {
+    box-shadow: 0 0 10px rgba(74, 144, 226, 0.5);
+  }
+  to {
+    box-shadow: 0 0 20px rgba(142, 68, 173, 0.8);
+  }
+}
+
+.ranking-badge {
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #4A90E2;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  z-index: 1;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.ranking-badge.gold {
+  background: linear-gradient(45deg, #FFD700, #FFA500);
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+}
+
+.ranking-badge.silver {
+  background: linear-gradient(45deg, #C0C0C0, #A9A9A9);
+  width: 45px;
+  height: 45px;
+  font-size: 1.4rem;
+}
+
+.ranking-badge.bronze {
+  background: linear-gradient(45deg, #CD7F32, #8B4513);
+  width: 42px;
+  height: 42px;
+  font-size: 1.3rem;
+}
+
+.current-user {
+  border: 2px solid #4A90E2;
+}
+
+.current-user-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #4A90E2;
+  color: white;
+  padding: 0.3rem 0.7rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.user-card-content {
+  display: flex;
+  align-items: center;
+}
+
+.user-avatar {
+  width: 80px;
+  height: 80px;
+  margin-right: 1.5rem;
+  border-radius: 50%;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.user-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.user-initial {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(135deg, #4A90E2, #8E44AD);
+}
+
+.user-details {
+  flex: 1;
+  position: relative;
+}
+
+.user-name {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.dark-mode .user-name {
+  color: #e9ecef;
+}
+
+.vote-stats {
+  margin-bottom: 1rem;
+}
+
+.stats-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+.dark-mode .stat-item {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.stat-label {
+  font-size: 0.7rem;
+  color: #6c757d;
+  text-transform: uppercase;
+}
+
+.dark-mode .stat-label {
+  color: #adb5bd;
+}
+
+.stat-value {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.dark-mode .stat-value {
+  color: #e9ecef;
+}
+
+.vote-breakdown {
+  margin-top: 1rem;
+}
+
+.vote-bar-container {
+  height: 10px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+}
+
+.dark-mode .vote-bar-container {
+  background-color: #444;
+}
+
+.vote-bar {
+  height: 100%;
+}
+
+.vote-bar.w {
+  background-color: #28a745;
+}
+
+.vote-bar.mid {
+  background-color: #ffc107;
+}
+
+.vote-bar.l {
+  background-color: #dc3545;
+}
+
+.vote-breakdown-text {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.3rem;
+  font-size: 0.8rem;
+  color: #6c757d;
+}
+
+.dark-mode .vote-breakdown-text {
+  color: #adb5bd;
+}
+
+/* Connect Button Styles */
+.user-actions {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-connect {
+  background: linear-gradient(45deg, #4A90E2, #8E44AD);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 0.4rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn-connect:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(45deg, #5a9ee6, #9e58b7);
+  color: white;
+}
+
+.dark-mode .btn-connect {
+  background: linear-gradient(45deg, #64B5F6, #BA68C8);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .btn-connect:hover {
+  background: linear-gradient(45deg, #74c0f7, #c478cf);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.w-votes {
+  color: #28a745;
+  font-weight: 600;
+}
+
+.mid-votes {
+  color: #ffc107;
+  font-weight: 600;
+}
+
+.l-votes {
+  color: #dc3545;
+  font-weight: 600;
+}
+
+.top-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.8rem;
+  color: white;
+}
+
+.top-badge.gold {
+  background: linear-gradient(45deg, #FFD700, #FFA500);
+}
+
+.top-badge.silver {
+  background: linear-gradient(45deg, #C0C0C0, #A9A9A9);
+}
+
+.top-badge.bronze {
+  background: linear-gradient(45deg, #CD7F32, #8B4513);
+}
+
+.empty-list {
+  text-align: center;
+  padding: 2rem;
+  color: #6c757d;
+  font-style: italic;
+}
+
+.dark-mode .empty-list {
+  color: #adb5bd;
+}
+
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 2rem;
+  }
+  
+  .user-card-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .user-avatar {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .stats-row {
+    justify-content: center;
+  }
+  
+  .top-badge {
+    position: static;
+    display: inline-block;
+    margin-top: 1rem;
+  }
+  
+  .current-user-badge {
+    position: static;
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+} 

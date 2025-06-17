@@ -1,0 +1,140 @@
+.vote-history-container {
+  padding: 20px;
+  background-color: var(--light-background);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+}
+
+.dark-mode .vote-history-container {
+  background-color: var(--dark-secondary);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.vote-history-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 10px;
+}
+
+.dark-mode .vote-history-title {
+  color: var(--dark-text);
+}
+
+.vote-history-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.vote-history-item {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.vote-history-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .vote-history-item {
+  background-color: var(--dark-tertiary);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.vote-history-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.vote-history-content {
+  padding: 15px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.vote-history-song {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--text-primary);
+}
+
+.dark-mode .vote-history-song {
+  color: var(--dark-text);
+}
+
+.vote-history-artist {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: 0 0 10px;
+}
+
+.dark-mode .vote-history-artist {
+  color: var(--dark-text-secondary);
+}
+
+.vote-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+  align-self: flex-start;
+}
+
+.vote-badge.l {
+  background-color: #ea4335;
+  color: white;
+}
+
+.vote-badge.mid {
+  background-color: #fbbc05;
+  color: #333;
+}
+
+.vote-badge.w {
+  background-color: #34a853;
+  color: white;
+}
+
+.vote-stats {
+  margin-top: auto;
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+}
+
+.dark-mode .vote-stats {
+  color: var(--dark-text-secondary);
+}
+
+.vote-history-loading,
+.vote-history-empty {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: var(--light-background);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.dark-mode .vote-history-loading,
+.dark-mode .vote-history-empty {
+  background-color: var(--dark-secondary);
+  color: var(--dark-text-secondary);
+}

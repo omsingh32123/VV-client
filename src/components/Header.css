@@ -1,0 +1,115 @@
+.navbar {
+  padding: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-gradient-light {
+  background: #f8f9fa;
+}
+
+.navbar-gradient-dark {
+  background: #1a1a1a;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode .navbar {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.navbar-brand span {
+  background: linear-gradient(
+    45deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+.logo {
+  height: 60px;
+  margin-right: 10px;
+  animation: logo-pulse 3s infinite ease-in-out;
+}
+
+@keyframes logo-pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Navigation Buttons Container */
+.nav-buttons-container {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  background-color: #f8f9fa; /* Match navbar background */
+}
+
+.dark-mode .nav-buttons-container {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  background-color: #1a1a1a !important; /* Match dark-mode background */
+}
+
+/* Dark mode button styling */
+.dark-mode .btn-outline-primary {
+  color: #8ab4f8;
+  border-color: #8ab4f8;
+}
+
+.dark-mode .btn-outline-primary:hover {
+  background-color: rgba(138, 180, 248, 0.1);
+}
+
+@media (max-width: 768px) {
+  .nav-buttons-container .container-fluid {
+    flex-wrap: wrap;
+  }
+  
+  .nav-buttons-container button {
+    margin: 5px !important;
+    flex: 1 1 40%;
+  }
+}
+
+@media (max-width: 576px) {
+  .nav-buttons-container button {
+    flex: 1 1 100%;
+  }
+}
+
+.dark-mode .search-container {
+  background-color: #343a40;
+}
+
+.dark-mode .search-input {
+  background-color: #343a40;
+  color: #e9ecef;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .search-input::placeholder {
+  color: #868e96;
+}
+
+.dark-mode .btn-outline-secondary {
+  color: #adb5bd;
+  border-color: #495057;
+}
