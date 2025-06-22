@@ -44,7 +44,7 @@ function Login() {
           picture: decoded.picture,
           email: decoded.email,
         }),
-        credentials: "include",
+        // credentials: "include",
       });
       const data = await response.json();
       if(response?.ok) {
