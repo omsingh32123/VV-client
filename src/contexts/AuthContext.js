@@ -130,7 +130,7 @@ export function AuthProvider({ children }) {
     setUser(userData);
 
     // Load user votes when logging in
-    await loadUserVotes(userData.id);
+    await loadUserVotes(userData._id);
   };
 
   const logout = () => {
