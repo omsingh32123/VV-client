@@ -5,7 +5,7 @@ import { jwtDecode } from "jwt-decode";
 import { useAuth } from "../../contexts/AuthContext";
 import "./Login.css";
 
-const SERVER_URI = process.env.BACKEND_URL || "http://localhost:5000";
+const SERVER_URI = process.env.BACKEND_URL;
 
 function Login() {
   const navigate = useNavigate();

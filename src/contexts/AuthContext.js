@@ -1,5 +1,5 @@
 import React, { createContext, useState, useContext, useEffect } from "react";
-const SERVER_URI = process.env.BACKEND_URL || "http://localhost:5000";
+const SERVER_URI = process.env.BACKEND_URL;
 
 const AuthContext = createContext();
 

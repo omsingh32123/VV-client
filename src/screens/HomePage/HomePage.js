@@ -5,7 +5,7 @@ import { io } from "socket.io-client";
 import { useAuth } from "../../contexts/AuthContext";
 import Header from "../../components/Header";
 import axios from "axios";
-const SERVER_URI = process.env.BACKEND_URL || "http://localhost:5000";
+const SERVER_URI = process.env.BACKEND_URL;
 const socket = io(SERVER_URI);
 
 

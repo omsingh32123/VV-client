@@ -4,7 +4,7 @@ import Header from "../../components/Header";
 import { useAuth } from "../../contexts/AuthContext";
 import "./TopVotersPage.css";
 
-const SERVER_URI = process.env.BACKEND_URL || "http://localhost:5000";
+const SERVER_URI = process.env.BACKEND_URL;
 
 function TopVotersPage() {
   const [loading, setLoading] = useState(true);
