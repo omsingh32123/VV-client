@@ -23,6 +23,10 @@ export function AuthProvider({ children }) {
 
   const loadUserVotes = async (userId) => {
     try {
+      if(!userId || userId === undefined) {
+        console.error("Error loading user votes: userId is undefined");
+        return;
+      }
       // Check if we have votes in localStorage first
       // const cachedVotes = localStorage.getItem(`userVotes_${userId}`);
       // if (cachedVotes) {
