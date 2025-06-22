@@ -136,7 +136,7 @@ function HomePage() {
         },
         body: JSON.stringify({
           trackId: trackId,
-          userId: userData.id
+          userId: userData._id
         }),
       });
       if (!response.ok) return;
