@@ -4,7 +4,7 @@ import Header from "../../components/Header";
 import { useAuth } from "../../contexts/AuthContext";
 import "./MostVotedPage.css";
 
-const SERVER_URI = process.env.BACKEND_URL;
+const SERVER_URI = process.env.REACT_APP_BACKEND_URL;
 
 function MostVotedPage() {
   const [loading, setLoading] = useState(true);

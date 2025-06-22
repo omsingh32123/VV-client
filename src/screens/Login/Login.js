@@ -5,7 +5,7 @@ import { jwtDecode } from "jwt-decode";
 import { useAuth } from "../../contexts/AuthContext";
 import "./Login.css";
 
-const SERVER_URI = process.env.BACKEND_URL;
+const SERVER_URI = process.env.REACT_APP_BACKEND_URL;
 
 function Login() {
   const navigate = useNavigate();
@@ -34,7 +34,7 @@ function Login() {
 
       // Use the AuthContext login function
       await login(userData);
-      const response = await fetch(`${SERVER_URI}/api/users/create`, {
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/users/create`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

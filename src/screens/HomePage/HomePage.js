@@ -5,7 +5,7 @@ import { io } from "socket.io-client";
 import { useAuth } from "../../contexts/AuthContext";
 import Header from "../../components/Header";
 import axios from "axios";
-const SERVER_URI = process.env.BACKEND_URL;
+const SERVER_URI = process.env.REACT_APP_BACKEND_URL;
 const socket = io(SERVER_URI);
 
 
